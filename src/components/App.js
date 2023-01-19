@@ -44,22 +44,21 @@ class App extends Component {
     			{
     				//Correct the percentage conditional for correct output
     				this.state.list.map(function(item,index){
-				   		if(item.percent > 75)
+				   		if(item.percent > 75.00)
 				   		{	
 				   			return(
 				   				//Conditional statement in the className of below div to give callName="bg-pink"
 				   				//if the percent >= 90 else className = "" 
 
 								
-								<div key={index} className={ item.percent >= 90 ? "bg-pink" : "" }>
+								<div key={index} className={ item.percent >= 90.00 ? "bg-pink" : "" }>
 									<div className="name">
 										{/* //Write code to display name */}
-										{ item.name };
+										{ item.name }
 									</div>
 									<div className="percent">
 										{/* //Write code to display percentage upto 2 decimal places */}
-										{/* { Math.round((item.percent + Number.EPSILON) * 100) / 100 }; */}
-										{ item.percent.toPrecision(4) };
+										{ item.percent.toPrecision(4) }
 									</div>
 								</div>
 				   			);
