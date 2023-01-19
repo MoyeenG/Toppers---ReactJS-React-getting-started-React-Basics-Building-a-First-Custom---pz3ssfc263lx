@@ -58,7 +58,8 @@ class App extends Component {
 									</div>
 									<div className="percent">
 										{/* //Write code to display percentage upto 2 decimal places */}
-										{ Math.round(item.percent * 100) / 100 };
+										{/* { Math.round((item.percent + Number.EPSILON) * 100) / 100 }; */}
+										{ item.percent.toPrecision(4) };
 									</div>
 								</div>
 				   			);
